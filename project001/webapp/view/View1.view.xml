@@ -1,0 +1,42 @@
+<mvc:View controllerName="project001.controller.View1"
+	xmlns:l="sap.ui.layout"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+    <!-- 上方的 xmlns:l="sap.ui.layout"
+         處理了Layout，的部分，l才能作用?-->
+	<l:VerticalLayout id="_IDGenVerticalLayout1"      
+		class="sapUiContentPadding"
+		width="100%">        
+		<l:content>
+		   <!--單純的Link元素-->
+		   <!--可以呼叫外部的URL，但也可以放在table裡面-->
+		   <!--text 是Link的文字，Press是到Controller裡處理的event-->
+		   <!--可以用enabled開啟或關閉-->
+		   <!--href則是網址-->
+		   <!--Target的說明
+			Specifies a target where the linked content will open.
+			Options are the standard values for window.
+			open() supported by browsers: _self, _top, _blank, _parent, _search.
+		   -->
+		   <!--以下有其他Properties可以去試
+			https://sapui5.hana.ondemand.com/sdk/#/api/sap.m.Link%23controlProperties		   
+		   -->
+			<Link id="_IDGenLink1"
+				text="Open message box"
+				press="handleLinkPress" />
+			<Link id="_IDGenLink2"
+				text="Disabled link"
+				enabled="false" />
+			<Link id="_IDGenLink3"
+				text="Open SAP Homepage"
+				target="_blank"
+				href="http://www.sap.com" />
+			<Link id="_IDGenLink4"
+				text="Cat Picture"
+				target="_self"
+				href="https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg" />                
+		</l:content>        
+	</l:VerticalLayout>              
+    </Page>
+</mvc:View>
